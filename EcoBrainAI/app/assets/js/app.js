@@ -204,6 +204,8 @@
     EB_renderReportTasks();
   };
 
+
+
   window.EB_clear = function(){
     document.getElementById('calcForm').reset();
     document.getElementById('projectName').value = '';
@@ -213,6 +215,8 @@
     EB_renderReportTasks();
   };
 
+
+  
   // KPIs e progresso
   function EB_tasksProgress(tasks){
     const total = tasks.length||1;
