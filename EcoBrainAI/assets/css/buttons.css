@@ -1,4 +1,3 @@
-/* Buttons (definidos os estilos base e as variações de cores e interações dos botões) */
 .btn {
     display: inline-block;
     /* Garante que o botão se comporte como um bloco inline (mantendo padding) */

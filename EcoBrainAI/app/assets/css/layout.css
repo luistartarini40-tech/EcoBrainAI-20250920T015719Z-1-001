@@ -1,12 +1,9 @@
-/* App layout */
-
 .app {
     display: grid;
     /* Ativa o Grid para o layout principal (sidebar + conteúdo) */
     grid-template-columns: 260px 1fr;
     /* 260px para a sidebar e o restante (1fr) para o conteúdo */
     gap: 16px;
-    /* Espaço entre a sidebar e o conteúdo */
     margin: 16px 0;
 }
 
@@ -18,9 +15,7 @@
     height: fit-content;
     /* Faz a sidebar ter a altura do seu conteúdo */
     position: sticky;
-    /* Faz com que a sidebar se mantenha visível */
     top: 84px;
-    /* Faz a sidebar "grudar" na tela quando o usuário rola */
 }
 
 .tab-btn {
@@ -35,7 +30,7 @@
     margin: 6px 0;
     font-weight: 600;
     color: rgb(39, 174, 96)
-        /* Texto branco (presumindo que o tema escuro está ativado ou forçado na sidebar) */
+    /* Texto branco (presumindo que o tema escuro está ativado ou forçado na sidebar) */
 }
 
 .tab-btn.active {
@@ -44,11 +39,9 @@
 
 .content .tab {
     display: none;
-    /* Esconde o conteúdo de todas as abas */
 }
 
 .content .tab.active {
-    /* Mostra apenas o conteúdo da aba ativa */
     display: block;
 }
 
@@ -63,7 +56,6 @@
 
     ;
 
-    /* O layout de 2 colunas (sidebar+conteúdo) vira 1 coluna */
     .grid.two,
     .grid.three {
         grid-template-columns: 1fr

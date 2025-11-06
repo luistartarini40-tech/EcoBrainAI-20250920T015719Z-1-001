@@ -1,5 +1,4 @@
 /* Cálculo, tarefas e relatórios*/
-/*funções básicas de apoio e o cálculo central das emissões*/
 /* Atalho para selecionar elementos pelo ID*/
   const $ = (id)=>document.getElementById(id);
 

@@ -1,16 +1,12 @@
 /* Contact */
 .contact-grid {
     align-items: start;
-    /* Garante que o formulário e o mapa comecem alinhados no topo do grid */
 }
 
 form {
     display: flex;
-    /* Usa Flexbox para organizar os campos */
     flex-direction: column;
-    /* Coloca os campos em uma coluna (empilhados) */
     gap: 12px;
-    /* Adiciona 12px de espaço ENTRE os elementos */
 }
 
 label {
@@ -19,7 +15,6 @@ label {
     flex-direction: column;
     /* Coloca o texto da label em cima do campo (empilhados) */
     gap: 6px;
-    /* Adiciona 6px de espaço ENTRE o texto da label e o campo de input */
 }
 
 input,
@@ -40,7 +35,6 @@ textarea:focus {
     outline: 3px solid #bbf7d0;
     /* Estilo visual que aparece quando o campo está selecionado/ativo */
     border-color: #86efac;
-    /* Altera a cor da borda ao focar para dar feedback ao usuário */
 }
 
 .form-actions {

@@ -26,7 +26,7 @@
     flex-direction: column;
     gap: 6px;
     align-items: flex-start;
-    /* Alinha o conteúdo (foto, nome, cargo) à esquerda */
+    /* Alinha o conteúdo à esquerda */
     border: 1px solid var(--border);
     padding: 16px;
     border-radius: var(--radius);

@@ -1,7 +1,5 @@
-/* Header (Navegação Global) */
 .site-header {
     position: sticky;
-    /* Faz o header fixar no topo ao rolar */
     top: 0;
     z-index: 40;
     /* Garante que fique acima da maioria do conteúdo */
@@ -102,7 +100,6 @@
 
 .grid.three {
     grid-template-columns: repeat(3, 1fr);
-    /* Grid de 3 colunas iguais */
 }
 
 
