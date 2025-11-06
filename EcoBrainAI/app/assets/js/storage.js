@@ -42,25 +42,6 @@
   document.getElementById('deleteProject').addEventListener('click', removeSelected);
   listEl.addEventListener('change', loadSelected);
 
-  // Config rename/export/print
-  document.getElementById('cfgRename').addEventListener('click', () => {
-    const oldName = document.getElementById('projectsList').value;
-    const newName = document.getElementById('cfgProjectName').value.trim();
-    if (!oldName || !newName) { alert('Selecione um projeto e informe um novo nome.'); return; }
-    const store = JSON.parse(localStorage.getItem('eb_store') || '{}');
-    if (!store[oldName]) { alert('Projeto não encontrado.'); return; }
-    store[newName] = store[oldName];
-    delete store[oldName];
-    localStorage.setItem('eb_store', JSON.stringify(store));
-    loadNames();
-    document.getElementById('projectsList').value = newName;
-    alert('Projeto renomeado.');
-  });
-  document.getElementById('exportCsv').addEventListener('click', () => window.EB_exportCSV());
-  document.getElementById('exportCsv2').addEventListener('click', () => window.EB_exportCSV());
-  document.getElementById('printReport').addEventListener('click', () => window.print());
-  document.getElementById('printReport2').addEventListener('click', () => window.print());
 
-  // init
   loadNames();
 })();
