@@ -66,7 +66,8 @@
     background: transparent;
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 6px 10px
+    padding: 6px 10px;
+    color: var(--text);
 }
 
 .font-controls .btn {
