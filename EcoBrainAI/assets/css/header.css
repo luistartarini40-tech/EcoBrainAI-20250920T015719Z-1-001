@@ -39,6 +39,7 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .nav a {

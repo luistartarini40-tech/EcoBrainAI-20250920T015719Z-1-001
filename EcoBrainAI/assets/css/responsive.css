@@ -46,6 +46,7 @@
     background: var(--bg);
     
     box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra para destacar */
+    /* Eu removi o 'flex-wrap: nowrap;' daqui, pois ele deve ir no header.css */
   }
 
   /* O JS usa essa classe para mostrar o menu quando clicado */
@@ -57,18 +58,9 @@
   .hero {
     padding: 48px 0;
   }
-  
-  /* Empilha os botões "Conheça os serviços", etc. */
-  .hero .actions {
-    flex-direction: column; /* Empilha os botões do hero */
-    align-items: stretch; /* Faz os botões ocuparem 100% da largura */
-    gap: 12px;
-  }
-  
-  .hero .actions .btn {
-    text-align: center; /* Centraliza o texto dos botões */
-  }
-}
+
+} /* <-- ESTA É A CHAVE '}' QUE ESTAVA FALTANDO */
+
 
 /* === AJUSTE FINO (Telas muito pequenas, < 480px) === */
 @media (max-width: 480px) {
@@ -77,5 +69,13 @@
   }
   .hero h1 {
     font-size: 1.8rem; /* Diminui o título principal para não quebrar muito */
+  }
+
+  /* Empilha os botões "Conheça os serviços", etc. */
+  .hero .actions {
+    display: flex;
+    flex-direction: column; /* Empilha os botões */
+    align-items: center; /* Alinha à esquerda (como você pediu) */
+    gap: 12px;               /* Adiciona espaço */
   }
 }
