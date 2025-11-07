@@ -15,7 +15,7 @@
 /* * Este agora é o breakpoint principal para celulares. 
  * Tudo aqui vira 1 coluna.
  */
-@media (max-width: 768px) {
+@media (max-width: 806px) {
   
   /* Faz todos os grids virarem 1 coluna */
   .grid.two,
@@ -78,4 +78,5 @@
     align-items: center; /* Alinha à esquerda (como você pediu) */
     gap: 12px;               /* Adiciona espaço */
   }
+
 }
