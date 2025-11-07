@@ -1,35 +1,81 @@
-/* Início da Media Query: As regras dentro deste bloco só se aplicam em telas com largura máxima (max-width) de 920px. */
-@media (max-width: 920px) {
+/* === TABLETS (Telas médias, < 1024px) === */
+/* * Este é o novo "passo" que faltava. 
+ * Em telas de tablet, evitamos o "esmagamento" 
+ * passando de 3 ou 4 colunas para 2 colunas.
+ */
+@media (max-width: 1024px) {
+  .grid.three,
+  .grid.four,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr); /* De 3 ou 4 colunas -> para 2 colunas */
+  }
+}
 
+/* === CELULARES (Telas pequenas, < 768px) === */
+/* * Este agora é o breakpoint principal para celulares. 
+ * Tudo aqui vira 1 coluna.
+ */
+@media (max-width: 768px) {
+  
+  /* Faz todos os grids virarem 1 coluna */
   .grid.two,
   .grid.three,
-  .grid.four {
-    grid-template-columns: 1fr;
-    /* Qualquer layout de 2, 3 ou 4 colunas é forçado a ter 1 coluna de 100% de largura. */
+  .grid.four,
+  .footer-grid {
+    grid-template-columns: 1fr; /* Tudo vira 1 coluna */
   }
 
+  /* O menu hamburguer (☰) aparece aqui */
   .menu-toggle {
     display: block;
-    /* O botão "☰" (Menu Toggle) que estava escondido é mostrado. */
   }
 
+  /* O menu de navegação normal (nav) é escondido */
   .nav {
-    display: none;
-    flex-direction: column;
+    display: none; /* Escondido por padrão */
+    flex-direction: column; /* Itens empilhados */
     align-items: flex-start;
-    background: var(--bg);
+    
+    /* Aparência do menu dropdown */
     position: absolute;
     right: 20px;
-    top: 64px;
-    /* Posiciona abaixo do cabeçalho (que tem 64px de altura). */
+    top: 64px; /* Abaixo do header */
     padding: 12px;
     border: 1px solid var(--border);
     border-radius: 12px;
+    background: var(--bg);
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra para destacar */
   }
 
+  /* O JS usa essa classe para mostrar o menu quando clicado */
   .nav.show {
-    display: flex; /* <-- CORRIGIDO AQUI */
-    /* Quando o JavaScript adiciona a classe.show ao menu, ele é exibido (display: flex). */
+    display: flex;
   }
 
+  /* Melhora o espaçamento da seção "hero" no celular */
+  .hero {
+    padding: 48px 0;
+  }
+  
+  /* Empilha os botões "Conheça os serviços", etc. */
+  .hero .actions {
+    flex-direction: column; /* Empilha os botões do hero */
+    align-items: stretch; /* Faz os botões ocuparem 100% da largura */
+    gap: 12px;
+  }
+  
+  .hero .actions .btn {
+    text-align: center; /* Centraliza o texto dos botões */
+  }
+}
+
+/* === AJUSTE FINO (Telas muito pequenas, < 480px) === */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px; /* Menos espaço nas laterais em celulares pequenos */
+  }
+  .hero h1 {
+    font-size: 1.8rem; /* Diminui o título principal para não quebrar muito */
+  }
 }
