@@ -69,3 +69,6 @@ img {
 }
 
 /* Imagens nunca ultrapassam a largura do seu contêiner e são exibidas como bloco */
+button {
+  cursor: pointer;
+}
